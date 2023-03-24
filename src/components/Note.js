@@ -29,7 +29,7 @@ function Note() {
 
   useEffect(()=>{
     if(noteURL !== undefined){
-      fetch(env.fetch_urlBackend, {
+      fetch(env.GLOBAL_BACKEND, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded'
@@ -68,11 +68,11 @@ function Note() {
     if(url === ""){
       return false;
     }
-    window.location.href = env.fetch_urlBackend + '/note/' + url;
+    window.location.href = env.GLOBAL_BACKEND + '/note/' + url;
   }
 
   function searchNote(){
-    window.location.href = env.fetch_urlBackend + '/note/';
+    window.location.href = env.GLOBAL_BACKEND + '/note/';
   }
 
   return (

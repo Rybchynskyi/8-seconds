@@ -4,8 +4,6 @@ import styles from "../tailwind_presets";
 const env = require("../env.json");
 const port = process.env.PORT || env.listen_port;
 
-console.log(env.fetch_urlBackend + ":" + port);
-
 function Create() {
 
   const [url, setUrl] = useState('');
@@ -26,8 +24,7 @@ function Create() {
       setFormClass('hidden');
       setLineClass('');
 
-      // fetch(env.fetch_urlBackend + ":" + port, {
-      fetch(env.fetch_urlBackend, {
+      fetch(env.GLOBAL_BACKEND, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded'
@@ -37,7 +34,7 @@ function Create() {
         .then(response => response.json())
         .then(response => {
           if(response.result){
-            setUrl(env.fetch_urlBackend+'/note/'+response.url)
+            setUrl(env.GLOBAL_BACKEND+'/note/'+response.url)
           }
         })
     }
