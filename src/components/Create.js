@@ -2,21 +2,9 @@ import {useState, useRef} from "react";
 import copyIcon from '../images/duplicate.svg';
 import styles from "../tailwind_presets";
 const env = require("../env.json");
+const port = process.env.PORT || env.listen_port;
 
-const herokuAppName = process.env.HEROKU_APP_NAME;
-console.log("herokuAppName: " + herokuAppName);
-let serverUrl;
-let clientUrl;
-if(herokuAppName === undefined){
-  serverUrl = "http://localhost:" + env.LOCAL_SERVER_PORT;
-  clientUrl = "http://localhost:" + env.LOCAL_CLIENT_PORT
-}
-else {
-  serverUrl = `https://${herokuAppName}.herokuapp.com`
-}
-
-console.log("serverUrl: " + serverUrl)
-console.log("clientUrl: " + clientUrl)
+console.log(env.fetch_urlBackend + ":" + port);
 
 function Create() {
 
@@ -38,7 +26,7 @@ function Create() {
       setFormClass('hidden');
       setLineClass('');
 
-      fetch(serverUrl, {
+      fetch(env.fetch_urlBackend + ":" + port, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded'
@@ -48,7 +36,7 @@ function Create() {
         .then(response => response.json())
         .then(response => {
           if(response.result){
-            setUrl(clientUrl +'/note/'+response.url)
+            setUrl(env.fetch_urlBackend+'/note/'+response.url)
           }
         })
     }

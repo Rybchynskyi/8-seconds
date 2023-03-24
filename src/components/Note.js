@@ -3,17 +3,6 @@ import {useEffect, useState} from "react";
 import styles from "../tailwind_presets";
 const env = require("../env.json");
 
-const herokuAppName = process.env.HEROKU_APP_NAME;
-let serverUrl;
-if(herokuAppName === undefined){
-  serverUrl = "http://localhost:" + env.LOCAL_SERVER_PORT
-}
-else {
-  serverUrl = `https://${herokuAppName}.herokuapp.com`
-}
-
-console.log("serverUrl: " + serverUrl)
-
 function Note() {
 
   const [noteText, setNoteText] = useState('')
@@ -40,7 +29,7 @@ function Note() {
 
   useEffect(()=>{
     if(noteURL !== undefined){
-      fetch(serverUrl, {
+      fetch(env.fetch_urlBackend, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded'

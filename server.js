@@ -3,19 +3,9 @@ const favicon = require('serve-favicon');
 const path = require('path');
 const env = require("./env.json");
 const port = process.env.PORT || env.listen_port;
-
 const mysql = require('mysql');
 const config = require('./db');
 const randomstring = require("randomstring");
-
-const herokuAppName = process.env.HEROKU_APP_NAME;
-let serverUrl;
-if(herokuAppName === undefined){
-    serverUrl = "http://localhost:" + env.LOCAL_SERVER_PORT
-}
-else {
-    serverUrl = `https://${herokuAppName}.herokuapp.com`
-}
 
 const app = express();
 app.use(express.static(path.join(__dirname, 'build')));
@@ -28,7 +18,6 @@ app.get('/ping', function (req, res) {
 
 //html service
 app.get('/*', function (req, res) {
-    console.log(serverUrl);
     res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
