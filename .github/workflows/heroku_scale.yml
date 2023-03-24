@@ -1,7 +1,17 @@
-name: Scale Heroku dynos
-  uses: akhileshns/heroku-dyno-scaler@v2.0.0
-  with:
-    api_key: ${{ secrets.HEROKU_API_KEY }}
-    app_name: eight-seconds
-    type: web
-    dyno_quantity: 1
+name: Deploy
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: akhileshns/heroku-deploy@v3.12.13 # This is the action
+        with:
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_app_name: eight-seconds #Must be unique in Heroku
+          heroku_email: alexandr.rybchinskij@gmail.com
