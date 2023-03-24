@@ -4,6 +4,7 @@ import styles from "../tailwind_presets";
 const env = require("../env.json");
 
 const herokuAppName = process.env.HEROKU_APP_NAME;
+console.log("herokuAppName: " + herokuAppName);
 let serverUrl;
 let clientUrl;
 if(herokuAppName === undefined){
