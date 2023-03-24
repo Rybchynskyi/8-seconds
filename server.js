@@ -1,5 +1,5 @@
 const express = require('express');
-const favicon = require('express-favicon');
+const favicon = require('serve-favicon');
 const path = require('path');
 const env = require("./env.json");
 // const port = process.env.PORT || env.listen_port;
@@ -14,7 +14,7 @@ const app = express();
 //здесь наше приложение отдаёт статику
 app.use(express.static(path.join(__dirname, 'build')));
 
-app.use(favicon(__dirname + '/build/favicon.ico'));
+app.use(favicon(path.join(__dirname, 'build', 'favicon.ico')))
 
 //простой тест сервера
 app.get('/ping', function (req, res) {
