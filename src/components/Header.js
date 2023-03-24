@@ -64,7 +64,7 @@ function Header() {
                 </ul>
               </nav>
               <label className="switch ml-4 mt-3">
-                <input type="checkbox" id="dark-mode-switch" checked={(theme === 'light')} onChange={changeTheme}/>
+                <input type="checkbox" id="dark-mode-switch" checked={(theme === 'dark')} onChange={changeTheme}/>
                 <span className="slider"></span>
               </label>
             </div>
@@ -87,7 +87,7 @@ function Header() {
               <li><NavLink to="/about" onClick={closeMenu}>About</NavLink></li>
             </ul>
             <label className="switch mt-3">
-              <input type="checkbox" id="dark-mode-switch" checked={(theme === 'light')} onChange={changeTheme}/>
+              <input type="checkbox" id="dark-mode-switch" checked={(theme === 'dark')} onChange={changeTheme}/>
               <span className="slider"></span>
             </label>
           </nav>
