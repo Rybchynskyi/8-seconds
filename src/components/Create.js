@@ -48,10 +48,6 @@ function Create() {
     let text = textAreaRef.current.innerText;
     navigator.clipboard.writeText(text);
     setCopySuccess('Copied!');
-  };
-
-  function changeTimer(){
-    setTimer(6)
   }
 
   return (
@@ -77,7 +73,7 @@ function Create() {
         <div className="text-xl mb-3 flex items-center">
           <p className="mb-2 truncate w-3/4 md:w-full dark:text-orange-500" ref={textAreaRef}>{url}</p>
           <button className="pl-3" onClick={copyToClipboard}>
-            <img className="mb-2 pr-2" src={copyIcon}/>
+            <img className="mb-2 pr-2" src={copyIcon} alt="copyIcon"/>
           </button>
           <p className="text-sm mb-2 text-zinc-500">{copySuccess}</p>
         </div>

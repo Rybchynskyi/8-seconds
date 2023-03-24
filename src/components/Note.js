@@ -59,7 +59,7 @@ function Note() {
       setFormClass('');
       setErrorClass('hidden');
     }
-  }, []);
+  }, [noteURL]);
 
   function getNote(event){
     event.preventDefault();
@@ -67,7 +67,7 @@ function Note() {
     url = url.trim();
     if(url === ""){
       return false;
-    };
+    }
     window.location.href = env.fetch_urlBackend + '/note/' + url;
   }
 
