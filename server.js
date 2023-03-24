@@ -22,7 +22,7 @@ app.get('/*', function (req, res) {
 });
 
 // DB connection
-const connectionString = 'mysql://b09edb86dcf589:f29a7985@us-cdbr-east-06.cleardb.net/heroku_c749f79ea0c8045?reconnect=true';
+const connectionString = env.CLEARDB_DATABASE_URL;
 const connection = mysql.createConnection(connectionString);
 
 // const connection = mysql.createConnection(config);

@@ -26,7 +26,8 @@ function Create() {
       setFormClass('hidden');
       setLineClass('');
 
-      fetch(env.fetch_urlBackend + ":" + port, {
+      // fetch(env.fetch_urlBackend + ":" + port, {
+      fetch(env.fetch_urlBackend, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded'
