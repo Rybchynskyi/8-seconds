@@ -3,32 +3,39 @@ const favicon = require('serve-favicon');
 const path = require('path');
 const env = require("./env.json");
 const port = process.env.PORT || env.listen_port;
+
 const mysql = require('mysql');
 const config = require('./db');
 const randomstring = require("randomstring");
 
-// здесь у нас происходит импорт пакетов и определяется порт нашего сервера
+const herokuAppName = process.env.HEROKU_APP_NAME;
+let serverUrl;
+if(herokuAppName === undefined){
+    serverUrl = "http://localhost:" + env.LOCAL_SERVER_PORT
+}
+else {
+    serverUrl = `https://${herokuAppName}.herokuapp.com`
+}
+
 const app = express();
-
-//здесь наше приложение отдаёт статику
 app.use(express.static(path.join(__dirname, 'build')));
-
 app.use(favicon(path.join(__dirname, 'build', 'favicon.ico')))
 
-//простой тест сервера
+// ping test
 app.get('/ping', function (req, res) {
     return res.send('pong');
 });
 
-//обслуживание html
+//html service
 app.get('/*', function (req, res) {
+    console.log(serverUrl);
     res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
-// БД
+// DB connection
 let connection = mysql.createConnection(config);
 
-// старт сервера
+// server start
 app.listen(port, () => {
     console.log('Server working on port: ' + port)
 
