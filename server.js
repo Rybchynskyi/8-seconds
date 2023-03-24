@@ -26,7 +26,7 @@ app.get('/*', function (req, res) {
 });
 
 // БД
-// let connection = mysql.createConnection(config);
+let connection = mysql.createConnection(config);
 
 // старт сервера
 app.listen(port, () => {

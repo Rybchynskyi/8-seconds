@@ -71,7 +71,7 @@ function Create() {
           Here is your link for reading the message:
         </p>
         <div className="text-xl mb-3 flex items-center">
-          <p className="mb-2 truncate w-3/4 md:w-full dark:text-orange-500" ref={textAreaRef}>{url}</p>
+          <p className="mb-2 truncate w-3/4 md:w-full dark:text-white" ref={textAreaRef}>{url}</p>
           <button className="pl-3" onClick={copyToClipboard}>
             <img className="mb-2 pr-2" src={copyIcon} alt="copyIcon"/>
           </button>
