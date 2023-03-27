@@ -4,7 +4,6 @@ const path = require('path');
 const env = require("./src/env.json");
 const port = process.env.PORT || env.LISTEN_PORT;
 const mysql = require('mysql');
-const config = require('./db');
 const randomstring = require("randomstring");
 
 const app = express();
