@@ -34,7 +34,7 @@ function Main() {
         </div>
         <div className="flex space-x-2 md:space-x-10 mt-10 justify-center">
           <a href='/create' className={styles.button}>Create a message</a>
-          <a href='/note' className={styles.button}>Write a message</a>
+          <a href='/note' className={styles.button}>Read a message</a>
         </div>
       </div>
     </div>

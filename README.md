@@ -1,70 +1,54 @@
-# Getting Started with Create React App
+# Application with filtering and searching
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
+![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Heroku](https://img.shields.io/badge/heroku-%23430098.svg?style=for-the-badge&logo=heroku&logoColor=white)
 
-## Available Scripts
+Result:<br>
+https://eight-seconds.herokuapp.com/
 
-In the project directory, you can run:
+## For deploying:
+1. Download the app
+2. Import [database.sql](https://github.com/Rybchynskyi/Event-calendar/blob/master/database.sql) into your local database
+3. Write your settings (DB link, ports)into src/env.json file
+4. Run "npm start:prod"
 
-### `npm start`
+The project aims to develop a simple and user-friendly application for sending messages that can only be read once and within a limited time for showing. The product can be useful for communication where it is important to transmit confidential information and be assured that it will be permanently deleted after being read.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The application was implemented using React.js, which ensures fast and uninterrupted interface operation. Additionally, the Tailwind library was used to achieve a modern and appealing design and to improve productivity, including the implementation of a dark theme.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+On the server side, Express.js was used to improve the application's performance and ensure optimal interaction with the client side.
 
-### `npm test`
+As a result of this approach to product development, a good user experience and alignment with the main goals of the project were successfully achieved.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<table border="0" align="center">
+ <tr>
+    <td>
+      <p align="center">
+        Desktop<br>
+        <img src="https://github.com/Rybchynskyi/Images-for-readme/blob/main/8seconds/8sec_desc_light.png" height="400">
+      </p>
+    </td>
+    <td>
+      <p align="center">
+        Mobile<br>
+        <img src="https://github.com/Rybchynskyi/Images-for-readme/blob/main/8seconds/8sec_mob_light.png" height="400">
+      </p>
+    </td>
+ </tr>
+ <tr>
+    <td>
+      <p align="center">
+        Desktop<br>
+        <img src="https://github.com/Rybchynskyi/Images-for-readme/blob/main/8seconds/8sec_desc_dark.png">
+      </p>
+    </td>
+    <td>
+      <p align="center">
+        Mobile<br>
+        <img src="https://github.com/Rybchynskyi/Images-for-readme/blob/main/8seconds/8sec_mob_dark.png" height="400">
+      </p>
+    </td>
+ </tr>
+</table>

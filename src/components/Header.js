@@ -78,8 +78,8 @@ function Header() {
               <nav>
                 <ul className="flex space-x-3 md:space-x-10 pt-3 dark:text-white">
                   <li><NavLink to="/">Home</NavLink></li>
-                  <li><NavLink to="/note">Note</NavLink></li>
                   <li><NavLink to="/create">Create</NavLink></li>
+                  <li><NavLink to="/note">Read</NavLink></li>
                   <li><NavLink to="/about">About</NavLink></li>
                 </ul>
               </nav>
