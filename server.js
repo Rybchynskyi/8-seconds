@@ -1,8 +1,8 @@
 const express = require('express');
 const favicon = require('serve-favicon');
 const path = require('path');
-const env = require("./env.json");
-const port = process.env.PORT || env.listen_port;
+const env = require("./src/env.json");
+const port = process.env.PORT || env.LISTEN_PORT;
 const mysql = require('mysql');
 const config = require('./db');
 const randomstring = require("randomstring");
@@ -22,10 +22,8 @@ app.get('/*', function (req, res) {
 });
 
 // DB connection
-// const connectionString = env.DATABASE_URL;
-// const connection = mysql.createConnection(connectionString);
-
-const connection = mysql.createConnection(config);
+const connectionString = env.DATABASE_URL;
+const connection = mysql.createConnection(connectionString);
 
 // server start
 app.listen(port, () => {
