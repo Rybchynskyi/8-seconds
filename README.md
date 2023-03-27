@@ -10,7 +10,7 @@ https://eight-seconds.herokuapp.com/
 
 ## For deploying:
 1. Download the app
-2. Import [database.sql](https://github.com/Rybchynskyi/Event-calendar/blob/master/database.sql) into your local database
+2. Import [database.sql](https://github.com/Rybchynskyi/8-seconds/blob/main/notes.sql) into your local database
 3. Write your settings (DB link, ports)into src/env.json file
 4. Run "npm start:prod"
 
@@ -29,27 +29,6 @@ As a result of this approach to product development, a good user experience and 
         Light mode
       </p>
     </td>
- </tr> 
- <tr>
-    <td>
-      <p align="center">
-        Desktop<br><br>
-        <img src="https://github.com/Rybchynskyi/Images-for-readme/blob/main/8seconds/8sec_desc_light.png" height="300">
-      </p>
-    </td>
-    <td>
-      <p align="center">
-        Mobile<br><br>
-        <img src="https://github.com/Rybchynskyi/Images-for-readme/blob/main/8seconds/8sec_mob_dark.png" height="300">
-      </p>
-    </td>
- </tr>
- <tr>
-    <td colspan="2">
-      <p align="center">
-        Dark mode
-      </p>
-    </td>
  </tr>
  <tr>
     <td>
@@ -62,6 +41,27 @@ As a result of this approach to product development, a good user experience and 
       <p align="center">
         Mobile<br><br>
         <img src="https://github.com/Rybchynskyi/Images-for-readme/blob/main/8seconds/8sec_mob_light.png" height="300">
+      </p>
+    </td>
+ </tr>
+ <tr>
+    <td colspan="2">
+      <p align="center">
+        Dark mode
+      </p>
+    </td>
+ </tr> 
+ <tr>
+    <td>
+      <p align="center">
+        Desktop<br><br>
+        <img src="https://github.com/Rybchynskyi/Images-for-readme/blob/main/8seconds/8sec_desc_light.png" height="300">
+      </p>
+    </td>
+    <td>
+      <p align="center">
+        Mobile<br><br>
+        <img src="https://github.com/Rybchynskyi/Images-for-readme/blob/main/8seconds/8sec_mob_dark.png" height="300">
       </p>
     </td>
  </tr>
