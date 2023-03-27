@@ -26,7 +26,7 @@ function Main() {
 
   return (
     <div className="grow self-center place-content-center flex flex-col mb-6 dark:text-white">
-      <img className="max-w-xs md:max-w-2xl mx-auto mb-8" src={cellphone} alt="3 steps" />
+      <img className="max-w-xs md:max-w-2xl mx-auto mb-8" src={cellphone} width="897" height="556" alt="3 steps" />
       <div className="max-w-sm md:max-w-2xl mx-auto px-6 md:px-0">
         <div>
           <animated.p style={{...springsLeft}} className={styles.bigText}><span className="text-purple-700 dark:text-white font-semibold">8</span>Seconds - the better way to say once</animated.p>
