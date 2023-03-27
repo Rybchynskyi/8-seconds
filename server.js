@@ -22,10 +22,10 @@ app.get('/*', function (req, res) {
 });
 
 // DB connection
-const connectionString = env.CLEARDB_DATABASE_URL;
-const connection = mysql.createConnection(connectionString);
+// const connectionString = env.DATABASE_URL;
+// const connection = mysql.createConnection(connectionString);
 
-// const connection = mysql.createConnection(config);
+const connection = mysql.createConnection(config);
 
 // server start
 app.listen(port, () => {
