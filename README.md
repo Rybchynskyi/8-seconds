@@ -27,13 +27,13 @@ As a result of this approach to product development, a good user experience and 
     <td>
       <p align="center">
         Desktop<br>
-        <img src="https://github.com/Rybchynskyi/Images-for-readme/blob/main/8seconds/8sec_desc_light.png" height="400">
+        <img src="https://github.com/Rybchynskyi/Images-for-readme/blob/main/8seconds/8sec_desc_light.png" height="300">
       </p>
     </td>
     <td>
       <p align="center">
         Mobile<br>
-        <img src="https://github.com/Rybchynskyi/Images-for-readme/blob/main/8seconds/8sec_mob_light.png" height="400">
+        <img src="https://github.com/Rybchynskyi/Images-for-readme/blob/main/8seconds/8sec_mob_light.png" height="300">
       </p>
     </td>
  </tr>
@@ -41,13 +41,13 @@ As a result of this approach to product development, a good user experience and 
     <td>
       <p align="center">
         Desktop<br>
-        <img src="https://github.com/Rybchynskyi/Images-for-readme/blob/main/8seconds/8sec_desc_dark.png">
+        <img src="https://github.com/Rybchynskyi/Images-for-readme/blob/main/8seconds/8sec_desc_dark.png" height="300">
       </p>
     </td>
     <td>
       <p align="center">
         Mobile<br>
-        <img src="https://github.com/Rybchynskyi/Images-for-readme/blob/main/8seconds/8sec_mob_dark.png" height="400">
+        <img src="https://github.com/Rybchynskyi/Images-for-readme/blob/main/8seconds/8sec_mob_dark.png" height="300">
       </p>
     </td>
  </tr>
