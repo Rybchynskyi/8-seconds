@@ -2,7 +2,6 @@ import {useState, useRef} from "react";
 import copyIcon from '../images/duplicate.svg';
 import styles from "../tailwind_presets";
 const env = require("../env.json");
-const port = process.env.PORT || env.listen_port;
 
 function Create() {
 
@@ -34,7 +33,7 @@ function Create() {
         .then(response => response.json())
         .then(response => {
           if(response.result){
-            setUrl(env.GLOBAL_BACKEND+'/note/'+response.url)
+            setUrl(env.GLOBAL_FRONTEND+'/note/'+response.url)
           }
         })
     }
@@ -54,15 +53,16 @@ function Create() {
   return (
     <div className="grow self-center place-content-center flex flex-col w-3/4 md:w-1/2">
       <form onSubmit={loadDataFromForm} className={formClass}>
-        <p className={styles.bigText + ' mb-4'}> Enter the note</p>
+        <p className={styles.bigText + ' mb-3'}> Enter the note</p>
+        <p className="text-md text-zinc-500 dark:text-zinc-200 mb-3">After creating the note you will recive the link for reading it. Someone can open this link just once</p>
         <textarea className="w-full h-16 rounded-lg px-6 py-5 shadow-xl mb-3" name="note" id="note" placeholder="Write some text" required></textarea>
-        <p className="text-2xl md:text-3xl dark:text-orange-500 mb-3 mt-4"> Your note will disappear in:</p>
+        <p className="text-2xl md:text-3xl dark:text-orange-500 mb-3 mt-4"> Your note will disappear after reading in:</p>
         <div className="flex items-center mb-6">
           <div className="w-3/4 pr-4">
             <input type="range" name="timer" value={timer} min="1" max="9" step="1" className="w-full h-2 bg-gray-400 rounded-lg appearance-none cursor-pointer dark:bg-orange-200 range-lg" onChange={(e) => setTimer(e.target.value)}/>
           </div>
           <div className="w-1/4 dark:text-orange-500">
-            <div className="text-4xl md:text-6xl">{timer} sec.</div>
+            <div className="text-2xl md:text-4xl font-bold">{timer} sec.</div>
           </div>
         </div>
         <button className={'float-right ' + styles.button} type="submit">Send</button>

@@ -1,10 +1,11 @@
-import React from "react";
+import React, {useRef} from "react";
 import {NavLink,} from "react-router-dom";
 import {useState} from "react";
+import {useSpring, animated, easings } from "@react-spring/web";
+
 
 function Header() {
   const [mobMenu, setMobMenu] = useState('hidden')
-
 
   //get current theme and set it to useState
   let currentTheme = localStorage.getItem('theme');
@@ -35,16 +36,35 @@ function Header() {
     localStorage.setItem('theme', newTheme)
   }
 
-  function changeMobMenu(){
+  // mobile menu
+  const [isVisible, setIsVisible] = useState(false);
+  const myRef = useRef(null);
+
+  const showingMenu = useSpring({
+    reset: true,
+    immediate: !myRef.current,
+    from: { y: 0, opacity: 1 },
+    to: { y: -50, opacity: 0 },
+    config: {
+      duration: 300,
+      easing: easings.steps(7)
+    },
+    reverse: isVisible
+  })
+
+  function changeMobMenu(event){
+    setIsVisible(!isVisible)
     if(mobMenu === 'hidden'){
       setMobMenu('')
     }
     else {
-      setMobMenu('hidden')
+      setTimeout(()=>{
+        setMobMenu('hidden')}, 500)
     }
   }
 
   function closeMenu(){
+    setIsVisible(false)
     setMobMenu('hidden');
   }
 
@@ -53,7 +73,7 @@ function Header() {
       <div>
         <div className="flex-none mx-6 md:mx-0">
           <div className="flex place-content-between py-4 border-b border-b-indigo-500 pb-3 dark:border-b-orange-500">
-            <a href="/" className="font-bold text-4xl mr-8 dark:text-white"><span className="text-purple-700 dark:text-orange-500">8</span>Seconds</a>
+            <a href="/" className="font-bold text-3xl md:text-4xl mr-8 dark:text-white"><span className="text-purple-700 dark:text-orange-500">8</span>Seconds</a>
             <div className="hidden md:flex md:block">
               <nav>
                 <ul className="flex space-x-3 md:space-x-10 pt-3 dark:text-white">
@@ -78,7 +98,7 @@ function Header() {
           </div>
         </div>
         {/*mobile menu*/}
-        <div className={mobMenu + " absolute right-6 top-14 py-3 px-8 bg-white rounded-lg shadow-2xl transition-all"}>
+        <animated.div style={{...showingMenu}} ref={myRef} className={mobMenu + " absolute right-6 top-14 py-3 px-8 bg-white rounded-lg shadow-2xl transition-all"}>
           <nav className="md:hidden flex flex-col">
             <ul className="">
               <li><NavLink to="/" onClick={closeMenu}>Home</NavLink></li>
@@ -91,7 +111,7 @@ function Header() {
               <span className="slider"></span>
             </label>
           </nav>
-        </div>
+        </animated.div>
       </div>
     </>
   );

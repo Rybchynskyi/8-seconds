@@ -3,6 +3,9 @@ import {useEffect, useState} from "react";
 import styles from "../tailwind_presets";
 const env = require("../env.json");
 
+var domainString = document.domain;
+console.log(domainString)
+
 function Note() {
 
   const [noteText, setNoteText] = useState('')
@@ -110,9 +113,9 @@ function Note() {
       <div className={formClass}>
         <form action="" onSubmit={getNote}>
           <p className={styles.bigText + ' mb-3'}>Enter HASH</p>
-          <p className="text-md text-zinc-500 dark:text-zinc-200">HASH its a short code of your message</p>
-          <div className="text-md mb-3 text-zinc-500 dark:text-zinc-200">
-            For example: https://antifobia.com/note/<span className="text-red-500 dark:text-orange-500">y8sr42bi4swms1o2yt2xtnrw - its a HASH</span>
+          <p className="text-md text-zinc-500 dark:text-zinc-200 ">HASH its a short code of your message</p>
+          <div className="text-md mb-3 text-zinc-500 dark:text-zinc-200 break-all">
+            For example: https://{domainString}/<span className="text-red-500 dark:text-orange-500">y8sr42bi4swms1o2yt2xtnrw - its a HASH</span>
           </div>
           <input type="text" name="url" id="url" className="w-full h-16 rounded-lg px-6 py-5 shadow-xl mb-3" required/>
           <button type='submit' className={'float-right ' + styles.button}>Search note</button>

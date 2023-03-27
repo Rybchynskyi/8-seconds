@@ -9,8 +9,6 @@ import Main from "./components/Main";
 import Note from "./components/Note";
 import Error from "./components/Error";
 
-
-
 function App() {
   return (
     <div className="bg-gradient-to-r from-orange-100 to-indigo-100 dark:from-zinc-900 dark:to-gray-900">
