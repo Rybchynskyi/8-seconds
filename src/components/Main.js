@@ -30,11 +30,11 @@ function Main() {
       <div className="max-w-sm md:max-w-2xl mx-auto px-6 md:px-0">
         <div>
           <animated.p style={{...springsLeft}} className={styles.bigText}><span className="text-purple-700 dark:text-white font-semibold">8</span>Seconds - the better way to say once</animated.p>
-          <animated.p style={{...springsRight}} className="text-md md:text-2xl mt-4">Your messages will be deleted after the moment, when it will be readed</animated.p>
+          <animated.p style={{...springsRight}} className="text-md md:text-2xl mt-4">Your messages will be deleted after the moment, when it will be read</animated.p>
         </div>
         <div className="flex space-x-2 md:space-x-10 mt-10 justify-center">
-          <a href='/create' className={styles.button}>Create a message</a>
-          <a href='/note' className={styles.button}>Read a message</a>
+          <a href='/create' className={styles.button}>Create message</a>
+          <a href='/note' className={styles.button}>Read message</a>
         </div>
       </div>
     </div>
